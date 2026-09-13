@@ -15,7 +15,7 @@ Fee math: `(base_fee + priority_fee) * effective_gas / 1e18` where `effective_ga
 
 ## Live Deployment (x402 reachable)
 
-- Endpoint: `https://84e190e1e48a1f.lhr.life/entrypoints/gasroute/invoke`
+- Endpoint: `https://203d9ebc92f149.lhr.life/entrypoints/gasroute/invoke`
 - Payment: exact-amount x402 invoice on **Solana** (USDC: `EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v`), charge `$0.01` per call, verified by any x402 client via the `X-PAYMENT` header.
 
 ## Related Bounty
