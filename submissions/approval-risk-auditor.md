@@ -67,7 +67,7 @@ used to validate every spender address on-chain).
 
 ## Live Link
 
-**Deployment URL:** `https://54a88cf7b8c17b.lhr.life`
+**Deployment URL:** `https://agentauditor-kfuv7dvf1-solmount.vercel.app`
 
 > **Note on this URL (honest disclosure):** this deployment is served from the author's own
 > machine over an encrypted public tunnel (localhost.run, TLS-terminated), because the
@@ -104,7 +104,7 @@ An unauthenticated call returns HTTP **402** with the standard x402 `accepts` bl
 base units), so the endpoint is verifiable as x402-reachable by anyone.
 
 ```bash
-curl -i -X POST https://54a88cf7b8c17b.lhr.life/entrypoints/audit/invoke \
+curl -i -X POST https://agentauditor-kfuv7dvf1-solmount.vercel.app/entrypoints/audit/invoke \
   -H 'content-type: application/json' \
   -d '{"wallet":"0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045","chains":[1]}'
 # → HTTP 402 + {"error":"X-PAYMENT header is required","accepts":[{...}]}
@@ -115,7 +115,7 @@ curl -i -X POST https://54a88cf7b8c17b.lhr.life/entrypoints/audit/invoke \
 ## Acceptance Criteria
 
 - [x] Meets all technical specifications — `wallet` / `chains` inputs, `approvals[]` / `risk_flags[]` / `revoke_tx_data[]` outputs
-- [x] Deployed on a domain — `https://54a88cf7b8c17b.lhr.life` (HTTPS, Vercel production deployment)
+- [x] Deployed on a domain — `https://agentauditor-kfuv7dvf1-solmount.vercel.app` (HTTPS, Vercel production deployment)
 - [x] Reachable via x402 — `x402-hono` middleware via `@lucid-dreams/agent-kit`; 402 + payment requirements verified live; payment settles through daydreams' facilitator
 - [x] All acceptance criteria from the issue are met
       - *Matches Etherscan approval data for top tokens* → `mode=etherscan` uses the Etherscan v2 `tokenapprovals` API directly; `mode=logs` reproduces the same semantics from chain data
